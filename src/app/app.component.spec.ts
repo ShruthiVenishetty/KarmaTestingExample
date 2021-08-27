@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'KarmaTestingExample'`, () => {
+  it(`should have Favourite Movie as 'Lord Of Rings'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('KarmaTestingExample');
+    expect(app.FavouriteMovie).toEqual('Lord Of Rings');
   });
 
-  it('should render title', () => {
+  it('should render Favourite Movie', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('KarmaTestingExample app is running!');
+    expect(compiled.querySelector('h1')?.textContent).toEqual('Favourite Movie : Lord Of Rings');
   });
 });
